@@ -1,18 +1,14 @@
-include<stdio.h>
+#include <stdio.h>
+int main()
+{
+    int  j, sum = 0;
+
+    printf("The first 10 natural number is :\n");
  
-int main(){
- 
-    int num,i,count=0;
-    printf("Enter a number: ");
-    scanf("%d",&num);
-    for(i=2;i<=num/2;i++){
-        if(num%i==0){
-         count++;
-            break;
-        }
+    for (j = 1; j <= 10; j++)
+    {
+        sum = sum + j;
+        printf("%d ",j);    
     }
-   if(count==0 && num!= 1)
-        printf("%d is a prime number",num);
-   else
-      printf("%d is not a prime number",num);
-   return 0;
+    printf("\nThe Sum is : %d\n", sum);
+}
